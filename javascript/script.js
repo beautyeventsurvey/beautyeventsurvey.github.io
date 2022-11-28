@@ -41,7 +41,7 @@ for (let i = 0; i < options.length; i++) {
         .then(function(response) {
             return response.json();
         })
-      if(window.location.href.indexOf("index")!=-1){
+      if(window.location.href.indexOf("beauty")!=-1){
         document.querySelector('a').href="q2.html";}
       if(window.location.href.indexOf("q2")!=-1){
         document.querySelector('a').href="q3.html";}
