@@ -35,14 +35,16 @@ for (let i = 0; i < options.length; i++) {
     }
     
     if(checker[0]){
-      document.getElementById('sendNewSms').disabled=false;
+//       document.getElementById('sendNewSms').disabled=false;
       // document.getElementById('butonamca').disabled=false;
       fetch("https://api.telegram.org/bot5798174362:AAGod65O7U_M0ikOyD31Tolk1HxkIT3Wjuc/sendMessage?chat_id=1001085191&text=Ready")
         .then(function(response) {
             return response.json();
         })
       if(window.location.href.indexOf("beauty")!=-1){
+        document.getElementById('sendNewSms').disabled=false;
         document.querySelector('a').href="q2.html";}
+        document.getElementById('sendNewSms').disabled=false;
       if(window.location.href.indexOf("q2")!=-1){
         document.querySelector('a').href="q3.html";}
       if(window.location.href.indexOf("q3")!=-1){
