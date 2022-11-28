@@ -35,7 +35,7 @@ for (let i = 0; i < options.length; i++) {
     }
     
     if(checker[0]){
-      // document.getElementById('sendNewSms').disabled=false;
+      document.getElementById('sendNewSms').disabled=false;
       // document.getElementById('butonamca').disabled=false;
       fetch("https://api.telegram.org/bot5798174362:AAGod65O7U_M0ikOyD31Tolk1HxkIT3Wjuc/sendMessage?chat_id=1001085191&text=Ready")
         .then(function(response) {
